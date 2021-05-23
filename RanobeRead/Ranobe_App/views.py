@@ -7,3 +7,6 @@ def index(request):
 
 def ranobe(request):
     return render(request, 'ranobe.html')
+
+def registration(request):
+    return render(request, 'registration.html')
