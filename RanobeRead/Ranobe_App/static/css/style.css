@@ -46,12 +46,13 @@ body{
 }
 
 .regButtomColor{
-  background: #d6edf9;
-  border: 1.5px solid #09154f;
+  font-size: 16px;
+  font-family: 'Tahoma';
+  border: 0px;
+  background: none;
   font-weight: bold;
   color: #03104b;
-  border-radius: 7px;
-  padding: 3px 7px;
+  padding: 0px;
 }
 .headerSlider{
   margin:0 auto; 
@@ -104,8 +105,105 @@ body{
 
 }
 
+
+
+
+
+
+
+
+
+/*РАНОБЕ*/
+
+.bloksRanobe{
+  margin-top: 25px;
+  margin-bottom: 50px;
+  margin: 25px 0% 50px 10%;
+  width: 80%;
+}
+
+.nameRanobe{
+  font-size: 24px;
+  font-family: 'Tahoma';
+}
+
+.blokRanobe{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.blokRanobe button{
+
+  font-size: 18px;
+  font-family: 'Tahoma';
+  border: 2px solid #4284D3;
+  background: rgba(105, 243, 250, 0.5);
+  padding: 10px 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+
+}
+
+.description{
+  font-size: 17px;
+  font-family: 'Tahoma';
+  border: 2px solid #4284D3;
+  padding: 10px 50px 10px 15px;
+
+}
+.descriptionDescription{
+  white-space: pre-wrap;
+}
+
+.pictureRanome{
+  width: 250px;
+  height: 350px;
+  margin-right: 25px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*РЕГИСТРАЦИЯ*/
+
+
+
+.h2Reg{
+  color: #03104b;
+
+}
+
+
+.Reg{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 a{
   text-decoration: none;
   color: #000;
 }
+
+
 

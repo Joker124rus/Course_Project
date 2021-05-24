@@ -5,15 +5,12 @@
 
 <h1 class="h2Reg">Регистрация</h1>
 <font>поля обязательные для заполнения *</font>
-<form >
-	<input class="regist" placeholder="Логин" type="text" required>*<br>
-	<input class="regist" placeholder="Пароль" type="password" required>*<br>
-
-
-	<button class="clickReg"> Зарегистрироваться</button></form>
+<form method="post" action="{% url 'registration_url' %}">
+	{% csrf_token %}
+	<input class="regist" placeholder="Логин" type="text" name="login" required>*<br>
+	<input class="regist" placeholder="Пароль" type="password" name="password" required>*<br>
+	<button class="clickReg" type="submit">Зарегистрироваться</button></form>
 </form>
-
-	</div>
 
 {% endblock content %}
 

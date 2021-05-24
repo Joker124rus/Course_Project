@@ -2,26 +2,33 @@
 {% load static %}
 
 {% block content %}
+<div class="bloksRanobe">
+		<p><font class="nameRanobe">{{ ranobe.name }}</font></p>
+			<div class="blokRanobe">
+				<img src="{% static ranobe.image %}" class="pictureRanome">
+				<button>Читать</button>
+			</div>
 
-		<p><font class="name1">{{ ranobe.name }}</font></p>
 
-		<img align=left class="foto" src="{% static ranobe.image %}" >
-
-		<div class="aftor">
-
+		<div class="description">
 			<strong>Японское наименование: </strong> {{ ranobe.japaneseName }}   <br>
 			<strong>Английское наименование: </strong> {{ ranobe.englishName }} <br>
 		<br>
 			<strong>Автор: </strong> {{ ranobe.author  }}  <br>
-			<strong>Статус: </strong>{{ ranobe.statusOfTitle }}<br>
+			<strong>Дата: </strong>{{ ranobe.date }}<br>
+			<strong>Жанры: </strong> {% for g in ranobe.genre %} g {% endfor %}  <br>
+			<strong>Статус произведения: </strong>{{ ranobe.statusOfTitle }}<br>
+			<strong>Статус перевода: </strong>{{ ranobe.statusOfTranslate}}<br>
 		<br>
 			<strong>Перевод с японского: </strong> {{ ranobe.translator }} <br>
 			<strong>Редактор: </strong> {{ ranobe.editor }} <br>
 
 			<p><strong>Описание: </strong>
-				{{ ranobe.description }}
-			</p></div>
 
-		<ul class="knopka" ><a href="zero-001.html"><li>Читать</li></a></ul>  <br><br><br><br>
+				<font class="descriptionDescription">{{ ranobe.description }}</font>
+
+			</p>
+		</div>
+</div>
 
 {% endblock content %}

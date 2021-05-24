@@ -1,12 +1,12 @@
 from django.db import models
 
-class User(models.Model):
+"""class User(models.Model):
     login = models.CharField(max_length=50)
     email = models.EmailField()
     password = models.CharField(max_length=40)
 
     def __str__(self):
-        return self.login
+        return self.login"""
 
 class Genre(models.Model):
     name = models.CharField(max_length=50)
