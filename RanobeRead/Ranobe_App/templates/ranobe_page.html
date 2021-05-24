@@ -16,7 +16,7 @@
 		<br>
 			<strong>Автор: </strong> {{ ranobe.author  }}  <br>
 			<strong>Дата: </strong>{{ ranobe.date }}<br>
-			<strong>Жанры: </strong> {% for g in ranobe.genre %} g {% endfor %}  <br>
+			<strong>Жанры: </strong> {{ ranobe.genres }}  <br>
 			<strong>Статус произведения: </strong>{{ ranobe.statusOfTitle }}<br>
 			<strong>Статус перевода: </strong>{{ ranobe.statusOfTranslate}}<br>
 		<br>

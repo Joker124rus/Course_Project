@@ -15,10 +15,26 @@
 	<div></div> <!--Левая полоса-->
 	<div class="list">
 		<header>
+
 			<div class="TopHeader">
 			<img class="name"src="{% static 'img/gg.png' %}">
+
 				<div class="HeaderDiv">
+					{% if user.is_authenticated %}
 					<form>
+						<table class="RegTable", class="regColor">
+							<tr>
+								<td colspan = "2">Добро пожаловать, {{user.username}}</td>
+							</tr>
+							<tr>
+								<td><a href="">Профиль</a></td>
+								<td><a href="{% url 'logout_url' %}">Выйти</a></td>
+							</td>
+						</table>
+					</form>
+					{% else %}
+					<form method="post" action="{% url 'login_url' %}">
+						{% csrf_token %}
 					<table class="RegTable">
 						<tr>
 							<td colspan="2">
@@ -43,23 +59,28 @@
 						</tr>
 					</table>
 					</form>
+					{% endif %}
 				</div>
 			</div>
+
+{% if error %}
+{{error}}
+{% endif %}
 
 		<div class="headerSlider">
 			<img src="{% static 'img/000.jpg' %}">
 		</div>
 
 		<ul class="menu">
-				<li>
-				    <a href="{% url 'index_url' %}" title="Главная">Главная</a>
-				 </li>
-				 <li>
-				    <a href="manga.html" title="Вакансии">Вакансии</a>
-				</li>
-				<li>
-				    <a href="ranobe.html" title="О нас">О нас</a>
-				</li>
+				<a href="{% url 'index_url' %}" title="Главная"><li>
+				    Главная
+				 </li></a>
+				 <a href="manga.html" title="Вакансии"><li>
+				    Вакансии
+				</li></a>
+				<a href="ranobe.html" title="О нас"><li>
+				    О нас
+				</li></a>
 			</ul>
 		</header>
 

@@ -20,6 +20,8 @@ from Ranobe_App import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index_url"),
+    path('login', views.login_, name="login_url"),
+    path('logout', views.logout_, name="logout_url"),
     path("ranobe/<int:id>", views.ranobe_page, name = "ranobe_page_url"),
     path('ranobe/', views.ranobe, name="ranobe_url"),
     path('registration/', views.registration, name="registration_url")

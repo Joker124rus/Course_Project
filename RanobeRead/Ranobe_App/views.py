@@ -8,9 +8,9 @@ from django.contrib.auth.models import User
 def index(request):
     num_visits = request.session.get('num_visits', 0)
     request.session['num_visits'] = num_visits + 1
-
+    ranobes_genres = Ranobe.genres
     ranobes = Ranobe.objects.all()
-    return render(request, 'index.html', {"ranobes": ranobes, "num_visits": num_visits})
+    return render(request, 'index.html', {"ranobes": ranobes, "ranobes_genres": ranobes_genres, "num_visits": num_visits})
 
 def ranobe(request):
     return render(request, 'ranobe.html')
@@ -26,10 +26,10 @@ def ranobe_page(request, id):
 def login_(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('/')
-    username = request.POST.get('username', None)
+    username = request.POST.get('login', None)
     password = request.POST.get('password', None)
     if username is None or password is None:
-        return render(request, 'example_app/login.html', locals())
+        return render(request, 'index.html', locals())
     else:
         user = authenticate(username=username, password=password)
         if user is not None:
@@ -38,16 +38,20 @@ def login_(request):
                 return HttpResponseRedirect("/")
             else:
                 error = "Error of user authentication"
-                return render(request, 'example_app/login.html', locals())
+                return render(request, 'index.html', locals())
         else:
             error = "User is incorrect"
-            return render(request, 'example_app/login.html', locals())
+            return render(request, 'index.html', locals())
 
 @csrf_exempt
 def registration(request):
     if request.method == "POST":
         username = request.POST.get('login', None)
+        email = request.POST.get('email', None)
         password = request.POST.get('password', None)
+        password_repeat = request.POST.get('password_repeat', None)
+        if password != password_repeat:
+            return HttpResponseRedirect('/')
         try:
             user = authenticate(username=username, password=password)
             if user is not None:
@@ -61,6 +65,12 @@ def registration(request):
         if request.user.is_authenticated:
             return HttpResponseRedirect('/')
     return render(request, 'registration.html', locals())
+
+
+@csrf_exempt
+def logout_(request):
+    logout(request)
+    return HttpResponseRedirect('/')
 
 
 

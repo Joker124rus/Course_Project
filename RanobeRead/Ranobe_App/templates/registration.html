@@ -4,12 +4,14 @@
 {% block content %}
 
 <h1 class="h2Reg">Регистрация</h1>
-<font>поля обязательные для заполнения *</font>
 <form method="post" action="{% url 'registration_url' %}">
 	{% csrf_token %}
-	<input class="regist" placeholder="Логин" type="text" name="login" required>*<br>
-	<input class="regist" placeholder="Пароль" type="password" name="password" required>*<br>
-	<button class="clickReg" type="submit">Зарегистрироваться</button></form>
+	<input placeholder="Логин" type="text" name="login" required><br>
+	<input placeholder="email" type="email" name="email" required><br>
+	<input placeholder="Пароль" type="password" name="password" required><br>
+	<input placeholder="Повторите пароль" type="password" name="password_repeat" required><br>
+	<button type="submit">Зарегистрироваться</button>
+</form>
 </form>
 
 {% endblock content %}
