@@ -1,309 +1,111 @@
 body{
-	background: url(img/fon.jpg)no-repeat center center fixed;
-	background-size: cover;
+  background: url(img/fon.jpg)no-repeat center center fixed;
+  background-size: cover;
+
 }
 
-.regForm{
-	margin-left: 40px;
-}
-.headerDiv{
-	min-width: 800px;
-	height: 50px;
+.columns{
+  display: grid;
+  grid-template-columns:1fr 5fr 1fr;  
 }
 .list{      
-
-	border-radius: 30px;
-	width:65%; 
-	min-height:650px; 
-	margin:0 auto; 
-	padding:10px 20px 20px 30px; 
-	background: rgba(403,403,403,0.7);
-	min-width: 935px;
-
+  min-height: 500px;
+  border-radius: 30px;
+  background: rgba(403,403,403,0.7);
 }
-.regregTable{
-	text-align: right;
-	font-weight: bold;
-	color: #03104b;
-	font-size:  18px;
+.TopHeader{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.regregTable td{
-
-	padding: 4px 0px;
-}
-.regColor{
-	color: #03104b;
-	font-weight: bold;
-}
-.regButtomColor: hover{
-	
-	background: #03104b;
-	color: #d6edf9;
-}
-.regButtomColor{
-	background: #d6edf9;
-	border: 1.5px solid #09154f;
-	font-weight: bold;
-	color: #03104b;
-	border-radius: 2px;
-	padding: 3px 7px;
-}
-
-.icon{
-	width: 45px;
-	height: 45px;
-	padding: 0px 3px;
-}
-
-.icon1{
-	position: absolute;
-	padding:0px 3px 0px 0px; 
-	
-	margin:15px 0px 0px 61%; 
-}
-
-.icon1 li{
-	display: block;
-}
-
-
-
 .name{
-	padding: 10px 0px 5px 0px;
-
+  padding: 15px;
+  height: 55%;
+  width: 55%;
 }
 
-
-
-
-.header{
-	margin:0 auto; 
-	margin-top: 25px;
-	width: 80%;
-	height:200px;
-	border: 3px solid #4284D3;
+.HeaderDiv{
+  margin-left: auto;
+  margin-right: 2%;
+}
+.RegTable{
+  margin-top: 7px;
+  font-weight: bold;
+  color: #03104b;
+  font-size:  18px;
+}
+.RegTable td input{
+  border-radius: 7px;
+  border: 1px solid #09154f;
 }
 
+.regColor{
+  color: #03104b;
+  font-weight: bold;
+  text-align: right;
+}
+
+.regButtomColor{
+  background: #d6edf9;
+  border: 1.5px solid #09154f;
+  font-weight: bold;
+  color: #03104b;
+  border-radius: 7px;
+  padding: 3px 7px;
+}
+.headerSlider{
+  margin:0 auto; 
+  margin-top: 35px;
+  width: 80%;
+  height: auto;
+}
+
+.headerSlider img{
+
+  width: 100%;
+  height: 100%;
+}
 .menu{
-	margin:10px 50px 0px 10%;
-	font-size:18px;
-	font-family:'Tahoma';
-    display: block;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size:18px;
+  font-family:'Tahoma';
 
 }
 
 .menu li{
-	float: left;
-	display: block;
-	width: 200px;
-	min-width: 100px;
-	height: 35px;
-	border: 2px color #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	margin: 10px 25px 10px 10px ;   	
-	padding: 10px 0px 0px 0px;
-	border-radius: 5px;
-	text-align: center;
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 20%;
+  min-width: 150px;
+  height: 35px;
+  border: 2px color #4284D3;
+  background: rgba(105, 243, 250, 0.5);
+  margin: 10px 25px 10px 10px;     
+  padding: 10px 0px 0px 0px;
+  border-radius: 5px;
+  text-align: center;
 }
-
-.knopka li{
-	font-size:18px;
-	font-family:'Tahoma';
-	float: left;
-	display: block;
-	width: 200px;
-	height: 35px;
-	border: 2px solid #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	margin: -5px 0px 0px -15px ;   	
-	padding: 10px 0px 0px 0px;
-	border-radius: 5px;
-	text-align: center;
+.blok1{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px 5% 50px 5%;
 }
-
-
-.knopka1 li{
-	font-size:18px;
-	font-family:'Tahoma';
-	float: left;
-	display: block;
-	width: 200px;
-	height: 35px;
-	border: 2px solid #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	margin: -100px 0px 0px -15px ;   	
-	padding: 10px 0px 0px 0px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-
-
-
-.knopka2 li{
-	font-size:18px;
-	font-family:'Tahoma';
-	float: left;
-	display: block;
-	width: 200px;
-	height: 35px;
-	border: 2px solid #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	margin: -70px 0px 0px -15px ;   	
-	padding: 10px 0px 0px 0px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-
-.knopka3 li{
-	font-size:18px;
-	font-family:'Tahoma';
-	float: left;
-	display: block;
-	width: 200px;
-	height: 35px;
-	border: 2px solid #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	margin: -165px 0px 0px -15px ;   	
-	padding: 10px 0px 0px 0px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-
-.knopka4 li{
-	font-size:18px;
-	font-family:'Tahoma';
-	float: left;
-	display: block;
-	width: 200px;
-	height: 35px;
-	border: 2px solid #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	margin: -55px 0px 0px -15px ;   	
-	padding: 10px 0px 0px 0px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-
-a{
-	text-decoration: none;
-	
-
-			
-	color: #000;
-}
-
-
-.foto{
-
-width: 250px;
-height: 350px;
-
-margin: 0px 20px 0px 0px;
-
-
-
-}
-
-
-.name1{
-
-	font-size: 24px;
-	font-family: 'Tahoma';
-	padding: 0px 0px 0px 10px;	
-}
-
-
-.nomer1{
-	margin: 90px 10px 0px 10px;
-}
-
-
-.aftor{
-	font-size: 17px;
-	font-family: 'Tahoma';
-	border: 2px solid #4284D3;
-	padding: 10px 50px 10px 15px;
-	margin-left: 275px;
-
-	
-}
-
-
 
 .blok{
 
-	width: 150px;
-	height:225px;
-	margin: 25px 20px 0px 20px ; 
-	text-align: center;
+  width: 150px;
+  height:225px;
+  margin: 25px 30px;
+  text-align: center;
 
 }
 
-.blok1{
-	margin: 50px 0px 10px 0px;
+a{
+  text-decoration: none;
+  color: #000;
 }
 
-
-
-.clik{
-	width: 25px;
-	height:25px;
-	margin: 25px 0px 0px 15px; 
-	text-align: center;
-	border: 1px solid #4284D3;
-	background: rgba(105, 243, 250, 0.5);
-	border-radius: 7px;
-	font-size: 18px;
-	padding: 5px 0px 0px 0px;
-
-}
-
-.clik:hover{
-    text-decoration: underline;
-}
-
-
-.GG{
-	
-	font-family: 'Tahoma';
-
-    width: 100%;
-    height: 34px;
-    margin: 10px 0px 0px 0px;
-    padding: 6px 12px;
-    font-size: 14px;
-}
-
-.Glava{
-	font-family: 'Tahoma';
-    height: 34px;
-    margin: 5px 0px 15px 0px;
-    padding: 6px 12px ;
-    font-size: 14px;
-    
-}
-
-
-.next{
-
-	font-family: 'Tahoma';
-	padding: 15px 0px 0px 0px;
-    font-size: 16px;
-}
-
-.next1:hover{
-	text-decoration: underline;
-}
-
-
-
-
-.text{
-	font-size: 17px;
-	font-family: 'Tahoma';
-	margin: 0px 25px 10px 10px;
-}

@@ -11,78 +11,67 @@
 </head>
 <body>
 
+<div class="columns">
+	<div></div> <!--Левая полоса-->
 	<div class="list">
-	<table class="headerDiv">
-			<tr>
-			<td><img class="name" src="{% static 'img/gg.png' %}" width=650px></td>
-			<td>
-				<form class="regForm" action="/registration">
-				<table>
-					<tr>
+		<header>
+			<div class="TopHeader">
+			<img class="name"src="{% static 'img/gg.png' %}">
+				<div class="HeaderDiv">
+					<form>
+					<table class="RegTable">
+						<tr>
+							<td colspan="2">
+								<input type="text" placeholder="Логин" name="longin">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="password" placeholder="Пароль" name="password">
+							</td>
+						</tr>
 
-						<td class="regColor">
-							Логин:
-						</td>
+						<tr>
 
-						<td>
-							<input type="text" name="longin">
-						</td>
-					</tr>
-					<tr>
-						<td class="regColor">
-							Пароль:
-						</td>
+							<td>
+								<button class="regButtomColor">Войти</button>
+							</td>
 
-						<td>
-							<input type="password" name="password">
-						</td>
-					</tr>
+							<td>
+								<button class="regButtomColor">Регистрация</button>
+							</td>
+						</tr>
+					</table>
+					</form>
+				</div>
+			</div>
 
-					<tr>
-
-						<td>
-							<button class="regButtomColor">Войти</button>
-						</td>
-
-						<td>
-							<button class="regButtomColor" onclick="document.location='{% url 'registration_url' %}'">Регистрация</button>
-						</td>
-					</tr>
-				</table>
-			</form>	</td></tr>
-		</table>
-
-
-		<div class="header">
-
-			<img src="{% static 'img/000.jpg' %}" width=100% height=100%>
+		<div class="headerSlider">
+			<img src="{% static 'img/000.jpg' %}">
 		</div>
 
-
-
 		<ul class="menu">
-			<li>
-			    <a href="{% url 'index_url' %}" title="Главная">Главная</a>
-			 </li>
-			 <li>
-			    <a href="manga.html" title="Манга">Манга</a>
-			</li>
-			<li>
-			    <a href="{% url 'ranobe_url' %}" title="Ранобэ">Ранобэ</a>
-			</li>
-		</ul>
+				<li>
+				    <a href="{% url 'index_url' %}" title="Главная">Главная</a>
+				 </li>
+				 <li>
+				    <a href="manga.html" title="Вакансии">Вакансии</a>
+				</li>
+				<li>
+				    <a href="ranobe.html" title="О нас">О нас</a>
+				</li>
+			</ul>
+		</header>
 
-<br>
         {% block content %}
         {% endblock content %}
 
-	</div>
-
-
+</div>
+	<div></div> <!--Правая полоса-->
+</div>
 
 </div>
 
 </body>
 </html>
-
 

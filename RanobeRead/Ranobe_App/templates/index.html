@@ -2,23 +2,10 @@
 {% load static %}
 
 {% block content %}
-
 <div class="blok1">
-
-	<table align="center">
-		<tr>
 		{% for ranobe in ranobes %}
-		<td>
-			<div class="blok"><a href="ranobe/{{ ranobe.id }}" title="{{ ranobe.name }}"><img src="{% static ranobe.image %}" width=100% height=100% align=right></a></div>
-		</td>
-			{% if ranobe.id == 6 %}
-			<tr>
-			</tr>
-			{% endif %}
-
+	<div class="blok"><a href="ranobe/{{ ranobe.id}}" title="{{ ranobe.name }}"><img src="{% static ranobe.image %}" width=100% height=100% align=right></a></div>
 		{% endfor %}
-		</tr>
-	</table> 
 </div>
 
 {% endblock content %}
