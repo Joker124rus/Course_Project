@@ -51,7 +51,7 @@ def registration(request):
         password = request.POST.get('password', None)
         password_repeat = request.POST.get('password_repeat', None)
         if password != password_repeat:
-            return HttpResponseRedirect('/')
+            return render(request, 'registration.html', locals())
         try:
             user = authenticate(username=username, password=password)
             if user is not None:

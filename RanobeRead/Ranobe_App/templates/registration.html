@@ -8,9 +8,9 @@
 	{% csrf_token %}
 	<input placeholder="Логин" type="text" name="login" required><br>
 	<input placeholder="email" type="email" name="email" required><br>
-	<input placeholder="Пароль" type="password" name="password" required><br>
-	<input placeholder="Повторите пароль" type="password" name="password_repeat" required><br>
-	<button type="submit">Зарегистрироваться</button>
+	<input placeholder="Пароль" type="password" name="password" id="p1" required><br>
+	<input placeholder="Повторите пароль" type="password" name="password_repeat" id="p2" required><br>
+	<button type="submit" onclick="Check(password, password_repeat)">Зарегистрироваться</button>
 </form>
 </form>
 
