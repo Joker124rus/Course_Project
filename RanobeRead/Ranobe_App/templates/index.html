@@ -7,68 +7,17 @@
 
 	<table align="center">
 		<tr>
-				
-				<td>
-				<div class="blok"><a href="ranobe/001.html" title="В другом мире моё имя Черный Целитель"><img src="img/001.jpg" width=100% height=100% align=right></a></div>
-			</td>
-			<td>
-				<div class="blok"><a href="ranobe/002.html" title="После перерождения, я хочу жить спокойной жизнью в деревне!"><img src="img/002.jpg" width=100% height=100% align=left></a></div>
-			</td>
-		
-			
+		{% for ranobe in ranobes %}
+		<td>
+			<div class="blok"><a href="ranobe/{{ ranobe.id }}" title="{{ ranobe.name }}"><img src="{% static ranobe.image %}" width=100% height=100% align=right></a></div>
+		</td>
+			{% if ranobe.id == 6 %}
+			<tr>
+			</tr>
+			{% endif %}
 
-			<td>
-				<div class="blok"><a href="ranobe/003.html" title="Записи о подьёме королевства Галдина"><img src="img/003.jpg" width=100% height=100% align=left></a></div>
-			</td>
-			<td>
-				<div class="blok"><a href="ranobe/004.html" title="Геймеры!"><img src="img/004.jpg" width=100% height=100% align=right></a></div>
-			</td>
-
-
+		{% endfor %}
 		</tr>
-
-		<tr>
-				
-				<td>
-				<div class="blok"><a href="ranobe/005.html" title="Перерожденный в дочь героев"><img src="img/005.jpg" width=100% height=100% align=right></a></div>
-			</td>
-			<td>
-				<div class="blok"><a href="ranobe/013.html" title="Переродившись, я найду тебя, сколько времени бы это не заняло."><img src="img/013.jpg" width=100% height=100% align=left></a></div>
-			</td>
-		
-			
-
-			<td>
-				<div class="blok"><a href="ranobe/007.html" title="Легенды о Континентальных Героях"><img src="img/007.jpg" width=100% height=100% align=left></a></div>
-			</td>
-			<td>
-				<div class="blok"><a href="ranobe/008.html" title="Драеонья душа в теле слайма, Я хочу жить мирно, притворяясь слабым"><img src="img/008.jpg" width=100% height=100% align=right></a></div>
-			</td>
-
-
-		</tr>
-
-		<tr>
-				
-				<td>
-				<div class="blok"><a href="ranobe/009.html" title="Прожить 100 лет и переродиться эльфом"><img src="img/009.jpg" width=100% height=100% align=right></a></div>
-			</td>
-			<td>
-				<div class="blok"><a href="ranobe/010.html" title="Капля!!"><img src="img/010.jpg" width=100% height=100% align=left></a></div>
-			</td>
-		
-			
-
-			<td>
-				<div class="blok"><a href="ranobe/011.html" title="Хроники Акаши- худшего преподавателя магии"><img src="img/011.jpg" width=100% height=100% align=left></a></div>
-			</td>
-			<td>
-				<div class="blok"><a href="ranobe/012.html" title="Я начал играть за призывателя в VRMMO"><img src="img/012.jpg" width=100% height=100% align=right></a></div>
-			</td>
-
-
-		</tr>
-
 	</table> 
 </div>
 

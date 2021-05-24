@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+		<p><font class="name1">{{ ranobe.name }}</font></p>
+
+		<img align=left class="foto" src="{% static ranobe.image %}" >
+
+		<div class="aftor">
+
+			<strong>Японское наименование: </strong> {{ ranobe.japaneseName }}   <br>
+			<strong>Английское наименование: </strong> {{ ranobe.englishName }} <br>
+		<br>
+			<strong>Автор: </strong> {{ ranobe.author  }}  <br>
+			<strong>Статус: </strong>{{ ranobe.statusOfTitle }}<br>
+		<br>
+			<strong>Перевод с японского: </strong> {{ ranobe.translator }} <br>
+			<strong>Редактор: </strong> {{ ranobe.editor }} <br>
+
+			<p><strong>Описание: </strong>
+				{{ ranobe.description }}
+			</p></div>
+
+		<ul class="knopka" ><a href="zero-001.html"><li>Читать</li></a></ul>  <br><br><br><br>
+
+{% endblock content %}
