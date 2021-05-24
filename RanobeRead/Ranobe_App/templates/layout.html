@@ -15,7 +15,8 @@
 	<table class="headerDiv">
 			<tr>
 			<td><img class="name" src="{% static 'img/gg.png' %}" width=650px></td>
-			<td><form class="regForm">
+			<td>
+				<form class="regForm" action="/registration">
 				<table>
 					<tr>
 
@@ -44,7 +45,7 @@
 						</td>
 
 						<td>
-							<button class="regButtomColor">Регистрация</button>
+							<button class="regButtomColor" onclick="document.location='{% url 'registration_url' %}'">Регистрация</button>
 						</td>
 					</tr>
 				</table>
