@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+		<div class="reader">
+			<p><font class="nameRanobe">{{ ranobe_read.ranobe.name }}</font></p>
+			<div class="readerButton">
+				{% if prev is not None %}
+				<a href="/ranobe/{{ ranobe_read.ranobe.id }}/{{ prev.id }}">Предыдущая глава {{ prev }}</a>
+				{% endif %}
+				<select  onchange="window.location.href = this.options[this.selectedIndex].value">
+					<option>Содержание</option>
+					<option value="/ranobe/{{ ranobe_read.ranobe.id }}/{{ chaptersList.0.id }}">Глава 1</option>
+					<option value="/ranobe/{{ ranobe_read.ranobe.id }}/{{ chaptersList.1.id }}">Глава 2</option>
+					<option value="ссылка">Глава 3</option>
+					<option value="ссылка">Глава 4</option>
+					<option value="ссылка">Глава 5</option>
+					<option value="ссылка">Глава 6</option>
+					<option value="ссылка">Глава 7</option>
+				</select>
+				{% if next is not None %}
+				<a href="/ranobe/{{ ranobe_read.ranobe.id }}/{{ next.id }}">Следующая глава  {{ next }}</a>
+			{% endif %}
+				</div>
+			<p><font class="NameGlava">Глава {{ ranobe_read }}</font></p>
+			<font class="ReadGlava">
+{{ ranobe_read.text }}
+			</font></p>
+			<div class="readerButton">
+				{% if prev is not None %}
+				<a href="/ranobe/{{ ranobe_read.ranobe.id }}/{{ prev.id }}">Предыдущая глава {{ prev }}</a>
+				{% endif %}
+				<select  onchange="window.location.href = this.options[this.selectedIndex].value">
+					<option>Содержание</option>
+					<option value="/ranobe/{{ ranobe_read.ranobe.id }}/{{ chaptersList.0.id }}">Глава 1</option>
+					<option value="/ranobe/{{ ranobe_read.ranobe.id }}/{{ chaptersList.1.id }}">Глава 2</option>
+					<option value="ссылка">Глава 3</option>
+					<option value="ссылка">Глава 4</option>
+					<option value="ссылка">Глава 5</option>
+					<option value="ссылка">Глава 6</option>
+					<option value="ссылка">Глава 7</option>
+				</select>
+				{% if next is not None %}
+				<a href="/ranobe/{{ ranobe_read.ranobe.id }}/{{ next.id }}">Следующая глава  {{ next }}</a>
+			{% endif %}
+				</div>
+		</div>
+{% endblock content %}

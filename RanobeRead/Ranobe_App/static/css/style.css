@@ -1,209 +1,349 @@
-body{
-  background: url(img/fon.jpg)no-repeat center center fixed;
-  background-size: cover;
-
-}
-
-.columns{
+@charset "UTF-8";
+.columns {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns:1fr 5fr 1fr;  
+  -ms-grid-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
 }
-.list{      
+
+.list {
   min-height: 500px;
   border-radius: 30px;
-  background: rgba(403,403,403,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
-.TopHeader{
+
+.TopHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.name{
+
+.name {
   padding: 15px;
   height: 55%;
   width: 55%;
 }
 
-.HeaderDiv{
+.HeaderDiv {
   margin-left: auto;
   margin-right: 2%;
 }
-.RegTable{
+
+.RegTable {
   margin-top: 7px;
   font-weight: bold;
   color: #03104b;
-  font-size:  18px;
+  font-size: 18px;
 }
-.RegTable td input{
+
+.RegTable td input {
   border-radius: 7px;
   border: 1px solid #09154f;
 }
 
-.regColor{
+.regColor {
   color: #03104b;
   font-weight: bold;
   text-align: right;
 }
 
-.regButtomColor{
+.regButtomColor {
   font-size: 16px;
-  font-family: 'Tahoma';
+  font-family: "Tahoma";
   border: 0px;
   background: none;
   font-weight: bold;
   color: #03104b;
   padding: 0px;
 }
-.headerSlider{
-  margin:0 auto; 
+
+.headerSlider {
+  margin: 0 auto;
   margin-top: 35px;
   width: 80%;
   height: auto;
 }
 
-.headerSlider img{
-
+.headerSlider img {
   width: 100%;
   height: 100%;
 }
-.menu{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size:18px;
-  font-family:'Tahoma';
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 18px;
+  font-family: "Tahoma";
 }
-
-.menu li{
+.menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   float: left;
   width: 20%;
   min-width: 150px;
   height: 35px;
-  border: 2px color #4284D3;
-  background: rgba(105, 243, 250, 0.5);
-  margin: 10px 25px 10px 10px;     
-  padding: 10px 0px 0px 0px;
+  background: rgba(105, 243, 250, 0.25);
+  margin: 10px 25px 10px 10px;
+  padding: 10px 15px 0px 15px;
   border-radius: 5px;
   text-align: center;
+  color: #03104b;
 }
-.blok1{
+
+.blok1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0px 5% 50px 5%;
 }
 
-.blok{
-
+.blok {
   width: 150px;
-  height:225px;
+  height: 225px;
   margin: 25px 30px;
   text-align: center;
-
 }
 
-
-
-
-
-
-
-
-
 /*РАНОБЕ*/
-
-.bloksRanobe{
+.bloksRanobe {
   margin-top: 25px;
   margin-bottom: 50px;
   margin: 25px 0% 50px 10%;
   width: 80%;
 }
 
-.nameRanobe{
+.nameRanobe {
   font-size: 24px;
-  font-family: 'Tahoma';
+  font-family: "Tahoma";
 }
 
-.blokRanobe{
+.blokRanobe {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 25px;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-
-.blokRanobe button{
-
+.blokRanobe button {
   font-size: 18px;
-  font-family: 'Tahoma';
+  font-family: "Tahoma";
   border: 2px solid #4284D3;
   background: rgba(105, 243, 250, 0.5);
   padding: 10px 25px;
   margin-top: 25px;
   border-radius: 10px;
-
 }
 
-.description{
+.description {
   font-size: 17px;
-  font-family: 'Tahoma';
+  font-family: "Tahoma";
   border: 2px solid #4284D3;
   padding: 10px 50px 10px 15px;
-
 }
-.descriptionDescription{
+
+.descriptionDescription {
   white-space: pre-wrap;
 }
 
-.pictureRanome{
+.pictureRanome {
   width: 250px;
   height: 350px;
   margin-right: 25px;
-
 }
-
-
-
-
-
-
-
-
-
 
 /*РЕГИСТРАЦИЯ*/
-
-
-
-.h2Reg{
+.h2Reg {
+  margin-top: 25px;
+  text-align: center;
   color: #03104b;
-
 }
 
-
-.Reg{
+.Reg {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+.Reg input {
+  border-radius: 5px;
+  border: 1px solid #09154f;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.Reg input button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 22.5px;
+  border-radius: 5px;
+  border: 1px solid #09154f;
+  padding: 7px 15px;
+  background: #d9fcfe;
+  font-weight: bold;
+  color: #03104b;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
+/* ВАКАНСИЯ*/
+.fillingVacancy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+.fillingVacancy input {
+  border-radius: 5px;
+  border: 1px solid #09154f;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  min-width: 200px;
+  width: 80%;
+}
+.fillingVacancy button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 27.5%;
+  border-radius: 5px;
+  border: 1px solid #09154f;
+  padding: 7px 15px;
+  background: #d9fcfe;
+  font-weight: bold;
+  color: #03104b;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.fillingVacancy textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+}
 
-
-
-
-
-
-
-
-
-
-
-a{
+a {
   text-decoration: none;
   color: #000;
 }
 
+/*О НАС*/
+.aboutUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
 
+.aboutUs font {
+  margin-top: 25px;
+  white-space: pre-wrap;
+  width: 75%;
+}
 
+/*ЧИТАЛКА*/
+.reader {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  margin: 25px 0% 50px 10%;
+  width: 80%;
+}
+.reader a {
+  margin: 10px 35px;
+  color: #03104b;
+  font-family: "Tahoma";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.readerButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 25px;
+}
+.readerButton select {
+  width: 175px;
+  border-radius: 5px;
+  padding: 2.5px 5px;
+  border: 1.5px solid #09154f;
+}
+
+.NameGlava {
+  font-family: "Tahoma";
+  font-size: 18px;
+}
+
+.ReadGlava {
+  font-family: "Tahoma";
+  font-size: 16px;
+  white-space: pre-wrap;
+}
+
+/*ПРОфИЛЬ*/
+.userDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #03104b;
+  font-family: "Tahoma";
+  font-size: 16px;
+}
+.userDiv td {
+  padding: 5px;
+}
+
+/* 
+    white-space: pre-wrap;
+
+    color: #03104b;
+  border: 1px solid #09154f;*/

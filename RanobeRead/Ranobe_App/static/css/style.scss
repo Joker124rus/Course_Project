@@ -1,0 +1,362 @@
+$color: #03104b;
+$colorBorder: #09154f;
+.columns{
+  display: grid;
+  grid-template-columns:1fr 5fr 1fr;  
+}
+.list{      
+  min-height: 500px;
+  border-radius: 30px;
+  background: rgba(403,403,403,0.7);
+}
+.TopHeader{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.name{
+  padding: 15px;
+  height: 55%;
+  width: 55%;
+}
+
+.HeaderDiv{
+  margin-left: auto;
+  margin-right: 2%;
+}
+.RegTable{
+  margin-top: 7px;
+  font-weight: bold;
+  color: $color;
+  font-size:  18px;
+}
+.RegTable td input{
+  border-radius: 7px;
+  border: 1px solid $colorBorder;
+}
+
+.regColor{
+  color: $color;
+  font-weight: bold;
+  text-align: right;
+}
+
+.regButtomColor{
+  font-size: 16px;
+  font-family: 'Tahoma';
+  border: 0px;
+  background: none;
+  font-weight: bold;
+  color: $color;
+  padding: 0px;
+}
+.headerSlider{
+  margin:0 auto; 
+  margin-top: 35px;
+  width: 80%;
+  height: auto;
+}
+
+.headerSlider img{
+
+  width: 100%;
+  height: 100%;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size:18px;
+  font-family:'Tahoma';
+  li{
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 20%;
+  min-width: 150px;
+  height: 35px; 
+  background: rgba(105, 243, 250, 0.25);
+  margin: 10px 25px 10px 10px;     
+  padding: 10px 15px 0px 15px;
+  border-radius: 5px;
+  text-align: center;
+  color: $color;
+  }
+}
+
+.blok1{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px 5% 50px 5%;
+}
+
+.blok{
+
+  width: 150px;
+  height:225px;
+  margin: 25px 30px;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+/*РАНОБЕ*/
+
+.bloksRanobe{
+  margin-top: 25px;
+  margin-bottom: 50px;
+  margin: 25px 0% 50px 10%;
+  width: 80%;
+}
+
+.nameRanobe{
+  font-size: 24px;
+  font-family: 'Tahoma';
+}
+
+.blokRanobe{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  flex-wrap: wrap;
+  align-items: flex-end;button{
+
+  font-size: 18px;
+  font-family: 'Tahoma';
+  border: 2px solid #4284D3;
+  background: rgba(105, 243, 250, 0.5);
+  padding: 10px 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+  }
+}
+
+
+.description{
+  font-size: 17px;
+  font-family: 'Tahoma';
+  border: 2px solid #4284D3;
+  padding: 10px 50px 10px 15px;
+
+}
+.descriptionDescription{
+  white-space: pre-wrap;
+}
+
+.pictureRanome{
+  width: 250px;
+  height: 350px;
+  margin-right: 25px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*РЕГИСТРАЦИЯ*/
+
+
+
+
+.h2Reg{
+  margin-top: 25px;
+  text-align: center;
+  color: $color;
+
+}
+
+
+.Reg{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  input{
+    border-radius: 5px;
+    border: 1px solid $colorBorder;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    width: 100%;
+  button{
+    display: flex;
+    justify-content: center;
+    margin-left: 22.5px;
+    border-radius: 5px;
+    border: 1px solid $colorBorder;
+    padding: 7px 15px;
+    background: #d9fcfe;
+    font-weight: bold;
+    color: $color;
+    align-content: center;
+
+  }
+  }
+}
+
+
+
+
+
+/* ВАКАНСИЯ*/
+
+
+.fillingVacancy{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  input{
+    border-radius: 5px;
+    border: 1px solid $colorBorder;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    min-width: 200px;
+    width: 80%;
+    }
+  button{
+    display: flex;
+    justify-content: center;
+    margin-left: 27.5%;
+    border-radius: 5px;
+    border: 1px solid $colorBorder;
+    padding: 7px 15px;
+    background: #d9fcfe;
+    font-weight: bold;
+    color: $color;
+    align-content: center;
+
+  }
+  textarea{
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+  }
+
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+/*О НАС*/
+
+
+
+
+.aboutUs{
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.aboutUs font{
+  margin-top: 25px;
+    white-space: pre-wrap;
+  width: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*ЧИТАЛКА*/
+
+
+
+.reader{
+  margin-top: 25px;
+  margin-bottom: 50px;
+  margin: 25px 0% 50px 10%;
+  width: 80%;
+  a{
+    margin: 10px 35px;
+    color: $color;
+    font-family: 'Tahoma';
+    font-size: 16px;
+    font-weight: bold;
+
+}
+}
+
+.readerButton{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  select{
+    width: 175px;
+    border-radius: 5px; 
+    padding: 2.5px 5px;
+    border: 1.5px solid $colorBorder;
+
+
+  }
+}
+
+.NameGlava{
+
+  font-family: 'Tahoma';
+  font-size: 18px;
+}
+
+.ReadGlava{
+
+  font-family: 'Tahoma';
+  font-size: 16px;
+      white-space: pre-wrap;
+}
+
+
+
+
+
+
+/*ПРОфИЛЬ*/
+
+
+.userDiv{
+
+  display: flex;
+  justify-content: center;
+  color: $color;
+  font-family: 'Tahoma';
+  font-size: 16px;
+  td{
+  padding: 5px;
+}
+}
+
+
+
+
+
+
+
+
+/* 
+    white-space: pre-wrap;
+
+    color: #03104b;
+  border: 1px solid #09154f;*/

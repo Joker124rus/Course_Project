@@ -4,6 +4,8 @@ from .models import *
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
+from django.views.decorators.cache import cache_page
+
 
 def index(request):
     num_visits = request.session.get('num_visits', 0)
@@ -12,15 +14,72 @@ def index(request):
     ranobes = Ranobe.objects.all()
     return render(request, 'index.html', {"ranobes": ranobes, "ranobes_genres": ranobes_genres, "num_visits": num_visits})
 
+def aboutUs(request):
+    return render(request, 'aboutUs.html')
+
+def vacancy(request):
+    return render(request, 'vacancy.html')
+
+def profile(request):
+    return render(request, 'user.html')
+
 def ranobe(request):
+
     return render(request, 'ranobe.html')
 
 def ranobe_page(request, id):
     ranobe = Ranobe.objects.get(id = id)
-    return render(request, 'ranobe_page.html', {"ranobe" : ranobe})
 
-#def registration(request):
-#    return render(request, 'registration.html')
+    chaptersList = []
+    ranobes = Ranobe_Reading.objects.all()
+    for r in ranobes:
+        if r.ranobe.id == id:
+            chaptersList.append(r)
+    min = -1
+    for r in chaptersList:
+        if r.id < -1 or min == -1 and r.ranobe.id == id:
+            min = r.id
+    chapterId = min
+
+    #request.session["ranobe_id"] = id
+    return render(request, 'ranobe_page.html', {"ranobe" : ranobe, "chapterId": chapterId})
+
+def reader(request, id, chapterId):
+    #ranobe_id = request.session["ranobe_id"]
+    ranobe_read = Ranobe_Reading.objects.get(ranobe_id = id, id = chapterId)
+    chaptersList = []
+    ranobes = Ranobe_Reading.objects.all()
+    for r in ranobes:
+        if r.ranobe.id == id:
+            chaptersList.append(r)
+    now = 0
+    prev = 0
+    prevChapterId = 0
+    next = 0
+    nextChapterId = 0
+    for i in range(len(chaptersList)):
+        if chaptersList[i].id == chapterId:
+            now = i
+    if now == 0:
+        prev = None
+    else:
+        prev = now - 1
+    if now == len(chaptersList) - 1:
+        next = None
+    else:
+        next = now + 1
+    if prev is not None:
+        prevChapterId = chaptersList[prev]
+    else:
+        prevChapterId = None
+    if next is not None:
+        nextChapterId = chaptersList[next]
+    else:
+        nextChapterId = None
+
+
+    return render(request, 'ranobe_reader.html', {"chaptersList": chaptersList, "ranobe_read": ranobe_read,
+                                                  "prev": prevChapterId, "next": nextChapterId})
 
 @csrf_exempt
 def login_(request):

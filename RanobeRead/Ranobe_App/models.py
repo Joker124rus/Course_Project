@@ -40,11 +40,12 @@ class Ranobe(models.Model):
 
 class Ranobe_Reading(models.Model):
     name = models.CharField(max_length=150)
-    product = models.ForeignKey(Ranobe, on_delete=models.CASCADE)
+    chapterNumber = models.IntegerField()
+    ranobe = models.ForeignKey(Ranobe, on_delete=models.CASCADE)
     text = models.TextField()
 
     def __str__(self):
-        return self.name
+        return (f"{self.chapterNumber} - {self.name}")
 
 class Applicant(models.Model):
     name = models.CharField(max_length=80)

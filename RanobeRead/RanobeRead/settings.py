@@ -37,18 +37,29 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Ranobe_App'
+    'Ranobe_App',
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
+    #'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+# Псевдоним кеша, используемый для хранения
+CACHE_MIDDLEWARE_ALIAS = 'default'
+# Дополнительная информация об экземпляре Django
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
+# Время действия ключей кеша в секундах
+CACHE_MIDDLEWARE_SECONDS = 600
 
 ROOT_URLCONF = 'RanobeRead.urls'
 
@@ -67,9 +78,28 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'RanobeRead.wsgi.application'
 
+"""CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:8000',
+    }
+}"""
+
+"""CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'cache_table',
+    }
+}"""
+
+"""CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'd:/cache/',
+    }
+}"""
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases

@@ -13,17 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from Ranobe_App import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name="index_url"),
-    path('login', views.login_, name="login_url"),
-    path('logout', views.logout_, name="logout_url"),
-    path("ranobe/<int:id>", views.ranobe_page, name = "ranobe_page_url"),
-    path('ranobe/', views.ranobe, name="ranobe_url"),
-    path('registration/', views.registration, name="registration_url")
-
+        path('admin/', admin.site.urls),
+        path('', views.index, name="index_url"),
+        path('login', views.login_, name="login_url"),
+        path('logout', views.logout_, name="logout_url"),
+        path('ranobe/<int:id>/<int:chapterId>/', views.reader, name="reader_url"),
+        path("ranobe/<int:id>", views.ranobe_page, name = "ranobe_page_url"),
+        path('ranobe/', views.ranobe, name="ranobe_url"),
+        path('registration/', views.registration, name="registration_url"),
+        path('aboutUs/', views.aboutUs, name="aboutUs_url"),
+        path('profile/', views.profile, name="profile_url"),
+        path('vacancy/', views.vacancy, name="vacancy_url")
 ]

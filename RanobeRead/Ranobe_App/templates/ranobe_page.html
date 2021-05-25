@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
+
 <div class="bloksRanobe">
 		<p><font class="nameRanobe">{{ ranobe.name }}</font></p>
 			<div class="blokRanobe">
 				<img src="{% static ranobe.image %}" class="pictureRanome">
-				<button>Читать</button>
+				<a href="{{ ranobe.id }}/{{ chapterId }}/">Читать</a>
 			</div>
-
 
 		<div class="description">
 			<strong>Японское наименование: </strong> {{ ranobe.japaneseName }}   <br>
@@ -16,7 +16,6 @@
 		<br>
 			<strong>Автор: </strong> {{ ranobe.author  }}  <br>
 			<strong>Дата: </strong>{{ ranobe.date }}<br>
-			<strong>Жанры: </strong> {{ ranobe.genres }}  <br>
 			<strong>Статус произведения: </strong>{{ ranobe.statusOfTitle }}<br>
 			<strong>Статус перевода: </strong>{{ ranobe.statusOfTranslate}}<br>
 		<br>

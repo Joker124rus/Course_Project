@@ -28,7 +28,7 @@
 								<td colspan = "2">Добро пожаловать, {{user.username}}</td>
 							</tr>
 							<tr>
-								<td><a href="">Профиль</a></td>
+								<td><a href="{% url 'profile_url' %}">Профиль</a></td>
 								<td><a href="{% url 'logout_url' %}">Выйти</a></td>
 							</tr>
 						</table>
@@ -76,10 +76,10 @@
 				<a href="{% url 'index_url' %}" title="Главная"><li>
 				    Главная
 				 </li></a>
-				 <a href="manga.html" title="Вакансии"><li>
+				 <a href="{% url 'vacancy_url' %}" title="Вакансии"><li>
 				    Вакансии
 				</li></a>
-				<a href="ranobe.html" title="О нас"><li>
+				<a href="{% url 'aboutUs_url' %}" title="О нас"><li>
 				    О нас
 				</li></a>
 			</ul>
